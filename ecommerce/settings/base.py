@@ -24,6 +24,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'apps.users',
+    'apps.categories'
 ]
 
 THIRD_APPS = [
@@ -36,17 +37,20 @@ INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES' : (
             'rest_framework_simplejwt.authentication.JWTAuthentication',
+            'rest_framework.authentication.SessionAuthentication',
         ),
     # 'DEFAULT_PERMISSION_CLASSES' : [
     #         'rest_framework.permissions.AllowAny',
     #     ],
     'DEFAULT_RENDERER_CLASSES' : [
         'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer'
         ],
     'DEFAULT_PARSER_CLASSES' : [
             'rest_framework.parsers.JSONParser',
         ]
 }
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 SIMPLE_JWT = {
