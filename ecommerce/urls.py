@@ -11,5 +11,6 @@ urlpatterns = [
 
     #api
     path('api/', include('apps.users.api.routers')),
-    path('api/', include('apps.categories.api.routers'))
+    path('api/', include('apps.categories.api.routers')),
+    path('api/', include('apps.products.api.routers'))
 ]

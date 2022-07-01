@@ -24,7 +24,8 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'apps.users',
-    'apps.categories'
+    'apps.categories',
+    'apps.products'
 ]
 
 THIRD_APPS = [
